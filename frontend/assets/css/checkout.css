@@ -1,0 +1,338 @@
+/* Cấu trúc chung */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Nền trang nhẹ nhàng */
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Danh sách sản phẩm */
+  .product-list {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    gap: 20px; /* Khoảng cách giữa các sản phẩm */
+  }
+  
+  .product {
+    border: 1px solid #ddd;
+    padding: 15px;
+    width: 30%;
+    text-align: center;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .product:hover {
+    transform: scale(1.05); /* Hiệu ứng khi hover sản phẩm */
+  }
+  
+  .product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Giỏ hàng */
+  .cart {
+    margin-top: 50px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cart ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .cart p {
+    font-weight: bold;
+  }
+  
+  /* Form */
+  form {
+    margin-top: 20px;
+  }
+  
+  form input,
+  form textarea {
+    margin: 5px;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+  }
+  
+  form input:focus,
+  form textarea:focus {
+    border-color: #008cba;
+    background-color: #fff;
+    outline: none;
+  }
+  
+  form button {
+    padding: 12px;
+    background-color: #008cba;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: #007b8a;
+  }
+  
+  /* Các Label */
+  form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+  }
+  
+  /* Textarea */
+  form textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    resize: vertical;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+  }
+  
+  form textarea:focus {
+    border-color: #008cba;
+    background-color: #fff;
+    outline: none;
+  }
+  
+  /* Phương thức thanh toán */
+  /* Phương thức thanh toán */
+  .payment-method {
+    margin-top: 20px;
+  }
+  
+  .payment-method label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .payment-method label:hover {
+    background-color: #e2e2e2;
+  }
+  
+  .payment-method input[type="radio"] {
+    margin-right: 15px;
+    width: auto; /* Đảm bảo radio button không bị kéo dài */
+  }
+  
+  .payment-method span {
+    font-weight: bold;
+  }
+  
+  .payment-description {
+    margin-left: 40px; /* Thụt lề để căn chỉnh với văn bản bên trên */
+    margin-top: -5px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #555;
+  }
+  /* Tiêu đề phương thức thanh toán */
+  .payment-method h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Cải thiện khoảng cách giữa các trường nhập */
+  form input,
+  form textarea {
+    margin-bottom: 15px;
+  }
+  
+  /* Form container */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Các sản phẩm trong giỏ hàng */
+  .cart ul li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+  }
+  
+  .cart ul li img {
+    max-width: 50px;
+    margin-right: 10px;
+  }
+  /* Nút Đặt hàng */
+  form button {
+    padding: 12px;
+    background-color: #008cba;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Đảm bảo nút chiếm 100% chiều rộng của form */
+    text-align: center; /* Căn giữa chữ trong nút */
+    font-size: 16px; /* Cải thiện kích thước chữ */
+  }
+  
+  form button:hover {
+    background-color: #007b8a;
+  }
+  /* Nút xóa sản phẩm */
+  .remove-item {
+    background: none;
+    border: none;
+    color: red;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Khoảng cách giữa biểu tượng và chữ */
+  }
+  
+  .remove-item i {
+    font-size: 18px; /* Điều chỉnh kích thước icon thùng rác */
+  }
+  
+  .remove-item:hover {
+    color: #d9534f; /* Màu đỏ khi hover */
+  }
+  /* Popup thông báo đặt hàng thành công */
+  .modal {
+    display: none; /* Mặc định ẩn */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Nền mờ */
+    animation: fadeIn 0.3s;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    animation: slideDown 0.4s;
+  }
+  
+  @keyframes slideDown {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .modal-content h2 {
+    color: #4caf50;
+    margin-top: 10px;
+  }
+  
+  .modal-content p {
+    color: #666;
+    margin: 20px 0;
+  }
+  
+  .success-icon {
+    font-size: 60px;
+    color: #4caf50;
+    margin-bottom: 15px;
+  }
+  
+  .close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: -20px;
+  }
+  
+  .close-button:hover {
+    color: #555;
+  }
+  
+  .continue-shopping {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+  }
+  
+  .continue-shopping:hover {
+    background-color: #45a049;
+  }
+  
